@@ -2,16 +2,19 @@
 
 == Description ==
 
-In Unix-like operating systems, chmod is the command and system call which may change the access permissions to file system objects (files and directories). It may also alter special mode flags. The request is filtered by the umask. The name is an abbreviation of change mode. (Wikipedia)
-
 This plugin provides a sidebar widget which can be used to adorn and supplement the functionality of your page. By clicking checkboxes, the user can generate the appropriate octal notation for file permissions. Creating a tutorial on file permissions? Place this into your sidebar. Do you run a page covering Linux issues for noobs? Place this into your sidebar and provide some utility that gives people a reason to bookmark your page and keep coming back.
+
+In Unix-like operating systems, chmod is the command and system call which may change the access permissions to file system objects (files and directories). It may also alter special mode flags. The request is filtered by the umask. The name is an abbreviation of change mode. (Wikipedia)
 
 == Changelog ==
 
-This initial release of the plugin has been tested to work with WordPress 3.9. This widget does not enforce its own colors or fonts, and should appear consistent with the rest of your themed page content. Tested to work on desktop or mobile.
+1.01 More robust implementation of enqueue script. It just means that the plugin will be more compatible with more themes, and less likely to malfunction.
+
+1.00 This initial release of the plugin has been tested to work with WordPress 3.9. This widget does not enforce its own colors or fonts, and should appear consistent with the rest of your themed page content. Tested to work on desktop or mobile.
 
 == Frequently Asked Questions ==
-I will include them as time goes on.
+Q. Does this plugin change the permissions of my files?
+A. No. This plugin places a widget in your sidebar which has checkboxes in it. As you click the checkboxes, the number below the checkboxes changes. Those numbers are the octal notation which can be used for setting file permissions.
 
 == Installation ==
 
