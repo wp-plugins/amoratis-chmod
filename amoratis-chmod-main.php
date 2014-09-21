@@ -3,7 +3,7 @@
  * Plugin Name: Amoratis CHMOD
  * Plugin URI: http://chmod.jackamoratis.com
  * Description: A Linux CHMOD converter widget for your sidebar.
- * Version: 1.0
+ * Version: 1.01
  * Author: Jack Amoratis
  * Author URI: http://jackamoratis.com
  * License: GPL3
