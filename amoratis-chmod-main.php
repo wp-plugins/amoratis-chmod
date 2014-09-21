@@ -57,7 +57,7 @@ function amo_chmod_scripts()
 {
         //This puppy relies on data-binding with Knockout JS
         wp_enqueue_script( 'amoratis_chmod_knockout', plugins_url() . '/amoratis-chmod/knockout-3.2.0.js');
-        wp_enqueue_script( 'amoratis_chmod_knockout2', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.js');
+        wp_enqueue_script( 'amoratis_chmod_main', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.js');
 } 
 
 add_action( 'wp_enqueue_scripts', 'amo_chmod_scripts' );
