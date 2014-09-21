@@ -53,12 +53,18 @@
 	THE SOFTWARE.
 */
 
+function amo_chmod_scripts()
+{
+        //This puppy relies on data-binding with Knockout JS
+        wp_enqueue_script( 'amoratis_chmod_knockout', plugins_url() . '/amoratis-chmod/knockout-3.2.0.js');
+        wp_enqueue_script( 'amoratis_chmod_knockout2', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.js');
+} 
+
+add_action( 'wp_enqueue_scripts', 'amo_chmod_scripts' );
+
 function widget_amoratis_chmod_converter($args) {
     extract($args);
-//This puppy relies on data-binding with Knockout JS
-wp_enqueue_script('knockout-js', plugins_url('knockout-3.2.0.js',__FILE__));
-wp_enqueue_script('amoratis-chmod-main-script', plugins_url('amoratis-chmod-main.js',__FILE__));
-?>
+?> 
 
 <style type='text/css'>
 table, th, td {
