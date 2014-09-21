@@ -15,7 +15,7 @@ In Unix-like operating systems, chmod is the command and system call which may c
 == Frequently Asked Questions ==
 Q. Does this plugin change the permissions of my files?
 
-A. No. This plugin places a widget in your sidebar which has checkboxes in it. As you click the checkboxes, the number below the checkboxes changes. Those numbers are the octal notation which can be used for setting file permissions.
+A. No. This plugin places a widget in your sidebar which has checkboxes in it. As you click the checkboxes, the numbers below the checkboxes change. Those numbers are the octal notation which can be used for setting file permissions.
 
 == Installation ==
 
