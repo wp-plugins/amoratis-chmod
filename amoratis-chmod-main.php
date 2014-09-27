@@ -53,7 +53,7 @@
 	THE SOFTWARE.
 */
 
-if( ! array_key_exists( 'hello-reader', $GLOBALS ) ) { 
+if( ! array_key_exists( 'amoratis_chmod', $GLOBALS ) ) { 
  
     class amoratis_chmod {
            
@@ -65,15 +65,7 @@ if( ! array_key_exists( 'hello-reader', $GLOBALS ) ) {
        
        function widget_amoratis_chmod_converter($args) {
                 extract($args);
-                ?> 
-
-                <style type='text/css'>
-                /*table, th, td {
-                    text-align: center;
-                }*/
-                </style>
-
-                <?php echo $before_widget; ?>
+                echo $before_widget; ?>
                             <?php echo $before_title
                                 . 'CHMOD Converter'
                                 . $after_title; ?>
