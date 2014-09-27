@@ -8,6 +8,8 @@ In Unix-like operating systems, chmod is the command and system call which may c
 
 == Changelog ==
 
+1.10 Converted the plugin to an object so it can be more effectively unit tested. This is not something a website visitor will notice. It is back end functionality that is useful for web developers who would like to include testing of this plugin in their unit testing.
+
 1.01 More robust implementation of enqueue script. It just means that the plugin will be more compatible with more themes, and less likely to malfunction.
 
 1.00 This initial release of the plugin has been tested to work with WordPress 3.9. This widget does not enforce its own colors or fonts, and should appear consistent with the rest of your themed page content. Tested to work on desktop or mobile.

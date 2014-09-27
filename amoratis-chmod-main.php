@@ -3,7 +3,7 @@
  * Plugin Name: Amoratis CHMOD
  * Plugin URI: http://chmod.jackamoratis.com
  * Description: A Linux CHMOD converter widget for your sidebar.
- * Version: 1.01
+ * Version: 1.1
  * Author: Jack Amoratis
  * Author URI: http://jackamoratis.com
  * License: GPL3
@@ -53,33 +53,49 @@
 	THE SOFTWARE.
 */
 
-function amo_chmod_scripts()
-{
-        //This puppy relies on data-binding with Knockout JS
-        wp_enqueue_script( 'amoratis_chmod_knockout', plugins_url() . '/amoratis-chmod/knockout-3.2.0.js');
-        wp_enqueue_script( 'amoratis_chmod_main', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.js');
-} 
+if( ! array_key_exists( 'hello-reader', $GLOBALS ) ) { 
+ 
+    class amoratis_chmod {
+           
+        function __construct() {
+             add_action( 'wp_enqueue_scripts', array( $this, 'amo_chmod_scripts' ) );
+             add_action( 'wp_enqueue_scripts', array($this, 'amo_chmod_styles'));
+             register_sidebar_widget('Amoratis CHMOD Converter', array($this,'widget_amoratis_chmod_converter'));
+        }
+       
+       function widget_amoratis_chmod_converter($args) {
+                extract($args);
+                ?> 
 
-add_action( 'wp_enqueue_scripts', 'amo_chmod_scripts' );
+                <style type='text/css'>
+                /*table, th, td {
+                    text-align: center;
+                }*/
+                </style>
 
-function widget_amoratis_chmod_converter($args) {
-    extract($args);
-?> 
+                <?php echo $before_widget; ?>
+                            <?php echo $before_title
+                                . 'CHMOD Converter'
+                                . $after_title; ?>
+                    <table id="permissions_table" class="sidebar"> </table>
+                        <?php echo $after_widget; 
+        }
 
-<style type='text/css'>
-table, th, td {
-    text-align: center;
+        function amo_chmod_scripts()
+        {
+                //This puppy relies on data-binding with Knockout JS
+                wp_enqueue_script( 'amoratis_chmod_knockout', plugins_url() . '/amoratis-chmod/knockout-3.2.0.js');
+                wp_enqueue_script( 'amoratis_chmod_main', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.js');
+        } 
+
+        function amo_chmod_styles()
+        {
+            wp_enqueue_style( 'amoratis_chmod_style', plugins_url() . '/amoratis-chmod/amoratis-chmod-style.css');
+        }
+
+    }
+     
+    $GLOBALS['amoratis_chmod'] = new amoratis_chmod();
+
 }
-</style>
-
-<?php echo $before_widget; ?>
-            <?php echo $before_title
-                . 'CHMOD Converter'
-                . $after_title; ?>
-	<table id="permissions_table" class="sidebar"> </table>
-        <?php echo $after_widget; ?>
-<?php
-}
-register_sidebar_widget('Amoratis CHMOD Converter',
-    'widget_amoratis_chmod_converter');
 ?>
