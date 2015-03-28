@@ -82,7 +82,7 @@ if( ! array_key_exists( 'amoratis_chmod', $GLOBALS ) ) {
 
         function amo_chmod_styles()
         {
-            wp_enqueue_style( 'amoratis_chmod_style', plugins_url() . '/amoratis-chmod/amoratis-chmod-style.css');
+            wp_enqueue_style( 'amoratis_chmod_style', plugins_url() . '/amoratis-chmod/amoratis-chmod-main.css');
         }
 
     }
