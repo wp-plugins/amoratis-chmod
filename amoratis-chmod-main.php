@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Amoratis CHMOD
  * Plugin URI: http://chmod.jackamoratis.com
- * Description: A Linux CHMOD converter widget for your sidebar.
+ * Description: A Linux CHMOD converter widget for your sidebar. Once you install this plugin, click Appearance -> Widgets. Then drag the Amoratis CHMOD widget into the sidebar widgets area. When you visit the front page of your website, there will be a CHMOD converter in your sidebar.
  * Version: 1.1
  * Author: Jack Amoratis
  * Author URI: http://jackamoratis.com
